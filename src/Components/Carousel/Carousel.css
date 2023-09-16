@@ -1,0 +1,29 @@
+.carousel__container{
+    width: 30%;
+    aspect-ratio: 3/4;
+    display: flex;
+    align-items: center;
+    margin-right: 150px;
+}
+
+.carousel__window{
+    height: 100%;
+    overflow: hidden;
+    margin: 0 10px 0 10px;
+}
+
+.carousel__all-pages-container{ 
+    height: 100%;
+    display: flex;
+    transition: translate;
+    transition-property: transform;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
+}
+
+
+
+.carousel__arrow:hover{
+    cursor: pointer;
+    opacity: 0.6;
+}

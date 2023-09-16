@@ -1,5 +1,6 @@
 import About from "../About/About";
 import Header from "../Header/Header";
+import Slider from "../Slider/Slider";
 
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
       <div className="container">
         <Header />
         <About />
+        <Slider />
       </div>
     </div>
   );
