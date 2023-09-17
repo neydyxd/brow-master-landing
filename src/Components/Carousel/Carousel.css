@@ -3,7 +3,7 @@
     aspect-ratio: 3/4;
     display: flex;
     align-items: center;
-    margin-right: 150px;
+    margin-right: 80px;
 }
 
 .carousel__window{
@@ -26,4 +26,19 @@
 .carousel__arrow:hover{
     cursor: pointer;
     opacity: 0.6;
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+    .carousel__container{
+        margin-right: 50px;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    .carousel__container{
+        margin-right: 0;
+        width: 90%;
+    }
+
 }

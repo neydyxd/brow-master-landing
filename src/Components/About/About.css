@@ -66,6 +66,7 @@
 
 .about__list{
     list-style: none;
+    padding: 0;
 }
 
 .about__list-element::before{
