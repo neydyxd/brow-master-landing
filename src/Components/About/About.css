@@ -59,7 +59,7 @@
 }
 
 .about__label{
-    min-width: 150px;
+    width: 150px;
     border-top: 1px solid #808080;
     margin-left: 20px;
 }
