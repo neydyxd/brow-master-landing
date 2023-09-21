@@ -111,4 +111,51 @@
     .navigation__icon:hover{
         opacity: 0.6;
     }
-}
+
+    .navigation__text-box{
+      width: 280px;
+      margin: 0 auto;
+      color: white;
+
+    }
+
+    .navigation__text-element{
+      font-family: Cinzel;
+      letter-spacing: 3px;
+      text-align: center;
+      font-weight: 400;
+      font-size: 20px;
+      background: linear-gradient(
+            to right,
+            #8ffe09 20%,
+            white 30%,
+            white 70%,
+            #8ffe09 80%
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-fill-color: transparent;
+        background-size: 500% auto;
+        animation: textShine 5s ease-in-out infinite alternate;
+    }
+
+    .navigation__text-element:first-of-type{
+      text-align-last: left;
+    }
+
+    .navigation__text-element:nth-child(2){
+      text-align-last: left;
+      margin-left: 40px;
+      color: #8FFE09;
+    }
+    .navigation__text-element:nth-child(3){
+      text-align-last: center;
+      margin-left: 40px;
+    }
+
+    .navigation__text-element:last-of-type{
+      text-align-last: right;
+      color: #8FFE09;
+    }
+  }

@@ -1,0 +1,25 @@
+.footer{
+    margin-top: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer__git{
+    background-image: url("../../images/github.svg");
+    background-position: center;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+}
+
+.footer__git:hover{
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.footer__copyright{
+    font-family: Cinzel;
+}

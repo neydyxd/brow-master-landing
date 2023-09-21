@@ -21,6 +21,12 @@ function Navigation({ handleClose }) {
                         </a>
                     </div>
                     <a href="tel: +79960008292" className="navigation__phone">+7-996-000-82-92</a>
+                    <div className='navigation__text-box'>
+                        <h4 className='navigation__text-element'>НЕ</h4>
+                        <h4 className='navigation__text-element'>БОЙСЯ</h4>
+                        <h4 className='navigation__text-element'>СТАНОВИТЬСЯ</h4>
+                        <h4 className='navigation__text-element'>ЛУЧШЕ</h4>
+                    </div>
                 </nav>
             </div>
         </div>

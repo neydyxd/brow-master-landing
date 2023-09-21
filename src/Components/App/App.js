@@ -1,4 +1,5 @@
 import About from "../About/About";
+import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 import Price from "../Price/Price";
 import Slider from "../Slider/Slider";
@@ -12,6 +13,7 @@ function App() {
         <About />
         <Slider />
         <Price />
+        <Footer />
       </div>
     </div>
   );
