@@ -13,7 +13,7 @@ const iconStyle = {
 const WINDOW_WIDTH = window.screen.width;
 
 function calcSliderSize(){
-    if (WINDOW_WIDTH >= 768) {
+    if (WINDOW_WIDTH >= 799) {
         return true;
     } else {
         return false;

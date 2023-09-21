@@ -84,21 +84,21 @@ margin-top: 150px;
 
 .slider__item_1{
     background-image: url('../../images/test.jpg');
-    background-position: -50px center;
+    background-position: -100px center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 .slider__item_2{
     background-image: url('../../images/test.jpg');
-    background-position: -50px center;
+    background-position: -100px center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 .slider__item_3{
     background-image: url('../../images/test.jpg');
-    background-position: -50px center;
+    background-position: -100px center;
     background-size: cover;
     background-repeat: no-repeat;
 } 
@@ -119,7 +119,7 @@ margin-top: 150px;
 }
 
 
-@media screen and (min-width: 320px) and (max-width: 767px) {
+@media screen and (min-width: 320px) and (max-width: 799px) {
     .slider{
         flex-direction: column-reverse;
         margin: 0 auto;
