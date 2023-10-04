@@ -1,5 +1,5 @@
 import { useState, useEffect, Children, cloneElement } from 'react';
-import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import { FaChevronLeft, FaChevronRight, FaInfoCircle } from 'react-icons/fa';
 
 
 function Carousel({ children }) {
@@ -9,20 +9,45 @@ const iconStyle = {
     filter: 'invert(81%) sepia(49%) saturate(859%) hue-rotate(32deg) brightness(104%) contrast(99%)',
 }
 
-
 const WINDOW_WIDTH = window.screen.width;
-
 function calcSliderSize(){
-    if (WINDOW_WIDTH >= 799) {
-        return true;
+    if (WINDOW_WIDTH < 799) {
+        var resolition = 0;
+        return resolition;
+    } if ((WINDOW_WIDTH >= 799) && (WINDOW_WIDTH < 1279)) {
+        var resolition = 1;
+        return resolition;
     } else {
-        return false;
+        var resolition = 2;
+        return resolition;
+    }
+}
+let resolition = calcSliderSize();
+
+function pageWidth() {
+    if (resolition === 2) {
+        var PAGE_WIDTH = 0.32;
+        return PAGE_WIDTH
+    } if (resolition === 1) {
+        var PAGE_WIDTH = 0.5;
+        return PAGE_WIDTH
+    } else {
+        var PAGE_WIDTH = 1;
+        return PAGE_WIDTH
     }
 }
 
-const PAGE_WIDTH = calcSliderSize() ? 0.32 : 1;
-const BLOCK_WIDTH = WINDOW_WIDTH * PAGE_WIDTH
+let PAGE_WIDTH = pageWidth();
 console.log(PAGE_WIDTH);
+
+let BLOCK_WIDTH = WINDOW_WIDTH * PAGE_WIDTH
+
+
+
+
+calcSliderSize();
+pageWidth();
+
 
 
 function handleLeftArrowClick(){

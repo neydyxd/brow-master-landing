@@ -14,11 +14,11 @@ function Slider(){
                     <label className='slider__label'></label>
                 </div>
                 <ul className='slider__list'>
-                    <li className='slider__list-element'>loremlorem loremloremloremlorem</li>
-                    <li className='slider__list-element'>loremlorem loremloremloremlorem</li>
-                    <li className='slider__list-element'>loremlorem loremloremloremlorem</li>
-                    <li className='slider__list-element'>loremlorem loremloremloremlorem</li>
-                    <li className='slider__list-element'>loremlorem loremloremloremlorem</li>
+                    <li className='slider__list-element'>Моя главная цель: сделать вас счастливее</li>
+                    <li className='slider__list-element'>Принимаю в студии в центре города, где есть все удобства для вашего комфорта</li>
+                    <li className='slider__list-element'>Работаю на профессиональных материалах и стерилизованных инструментах</li>
+                    <li className='slider__list-element'>Экономлю ваши нервы 15 мин по утрам</li>
+                    <li className='slider__list-element'>С моим макияжем без комплиментов вы не останетесь</li>
                 </ul>
             </div>
             <div className='slider__arrow-block'>

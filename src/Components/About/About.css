@@ -7,6 +7,12 @@
 
 }
 
+.about__text-box{
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+}
+
 .about__photo-box{
     width: 40%;
     position: relative;
@@ -18,23 +24,23 @@
 }
 
 .about__button{
+    margin: 0 auto;
+    margin-top: 50PX;
     padding: 0;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: none;
-    background-color: #8FFE09;
+    width: 100%;
+    height: 50PX;
+    background: none;
+    border: 2px solid #8FFE09;
     color: white;
     font-size: 20px;
     font-family: Helvetica;
-    position: absolute;
-    bottom: -50px;
-    right: -50px;
+    transition: all ease 1s;
 }
 
 .about__button:hover{
-    opacity: 0.6;
+
     cursor: pointer;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
 }
 
 .about__title{
@@ -49,9 +55,9 @@
     font-family: Shlapak;
     font-size: 60px;
     margin: 0;
-    text-align: right;
-    margin-right: 50px;
-    margin-top: -20px;
+    text-align: center;
+    margin-right: 70px;
+    margin-top: -40px;
 }
 
 .aboute__title-container{
@@ -67,11 +73,12 @@
 .about__list{
     list-style: none;
     padding: 0;
+
 }
 
 .about__list-element::before{
     content: url("   ");
-    margin-right: 30px;
+    margin-right: 10px;
     display: inline-block;
     content: ' ';
     background-image: url('../../images/arrow.svg');
@@ -85,13 +92,19 @@
 .about__list-element{
     color: white;
     font-family: Helvetica;
-    font-size: 18px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-indent: 0;
+    text-indent: -38px;
+    margin-left: 38px;
+    line-height: 1.5;
+
 }
 
 
 @media screen and (min-width:800px) and (max-width: 1279px) {
     .about{
-        max-width: 90%;
+        max-width: 100%;
     }
     .about__title{
         font-size: 30px;
@@ -99,8 +112,8 @@
 
     .about__subtitle{
         font-size: 30px;
-        text-align: center;
-        margin-right: 60px;
+        text-align: left;
+        margin-left: 120px;
         margin-top: -10px;
     }
 
@@ -108,21 +121,21 @@
         min-width: 80px;
     }
 
+    .about__list{
+        list-style-position: outside;
+    }
+
     .about__list-element{
-        font-size: 12px;
+        font-size: 14px;
+        text-indent: -43px;
+        margin-left: 43px;
+
     }
 
     .about__list-element::before{
         margin-right: 15px;
     }
 
-    .about__button{
-        width: 100px;
-        height: 100px;
-        font-size: 12px;
-        bottom: -40px;
-        right: -40px;
-    }
 }
 
 @media screen and (min-width:320px) and (max-width: 799px) {
@@ -137,16 +150,15 @@
     }
 
     .about__text-box{
+        max-width: 100%;
         margin-top: 90px;
+        flex-direction: column-reverse;
+    }
+    .about__button{
+        margin-top: 0;
+        margin-bottom: 20px;
     }
 
-    .about__button{
-        width: 90px;
-        height: 90px;
-        font-size: 12px;
-        bottom: -20px;
-        right: -20px;
-    }
 
     .about__title{
         font-size: 30px;
@@ -165,6 +177,8 @@
 
     .about__list-element{
         font-size: 12px;
+        text-indent: -30px;
+        margin-left: 30px;
     }
 
     .about__list-element::before{
