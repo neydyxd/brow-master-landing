@@ -1,6 +1,6 @@
 import about from '../../images/about.jpg';
 
-function About() {
+function About({onClickButton}) {
     return(
         <section className="about">
             <div className="about__photo-box">
@@ -20,7 +20,7 @@ function About() {
                     <li className="about__list-element">Уже два года делаю брови мечты за  30 мин</li>
                     <li className="about__list-element">Создам образ, чтоб челюсть отвисла</li>
                 </ul>
-                <button type="click" className="about__button">Записаться на брови</button>
+                <button type="click" className="about__button" onClick={onClickButton}>Записаться на брови</button>
             </div>
         </section>
     );
