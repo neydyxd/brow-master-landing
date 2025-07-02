@@ -7,7 +7,7 @@ function About({onClickButton}) {
                 <img className="about__photo" src={about} alt="аватарка"/>
             </div>
             <div className="about__text-box">
-                <div className="aboute__title-container">
+                <div className="about__title-container">
                     <h2 className="about__title">обо мне</h2>
                     <label className="about__label"></label>
                 </div> 
@@ -19,6 +19,7 @@ function About({onClickButton}) {
                     <li className="about__list-element">Занималась бальными танцами, где и смогла найти свое призвание в красоте</li>
                     <li className="about__list-element">Уже два года делаю брови мечты за  30 мин</li>
                     <li className="about__list-element">Создам образ, чтоб челюсть отвисла</li>
+                    <li className="about__list-element">🌟 Более 100 довольных клиентов</li>
                 </ul>
                 <button type="click" className="about__button" onClick={onClickButton}>Записаться на брови</button>
             </div>
