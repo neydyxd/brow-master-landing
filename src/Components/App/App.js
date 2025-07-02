@@ -6,16 +6,17 @@ import Price from "../Price/Price";
 import Slider from "../Slider/Slider";
 import { useState } from 'react';
 
-
 function App() {
-  const[popupOpen, setPopupOpen] = useState(false)
+  const [popupOpen, setPopupOpen] = useState(false);
 
-  function handlePopupOpen(){
+  function handlePopupOpen() {
     setPopupOpen(true);
-    console.log(popupOpen);
   }
 
- 
+  function handlePopupClose() {
+    setPopupOpen(false);
+  }
+
   return (
     <div className="App">
       <div className="container">
@@ -24,7 +25,7 @@ function App() {
         <Slider />
         <Price />
         <Footer />
-        <Popup isOpen={popupOpen} />
+        <Popup isOpen={popupOpen} onClose={handlePopupClose} />
       </div>
     </div>
   );

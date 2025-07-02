@@ -24,17 +24,17 @@ function Header() {
         </div>
         <div className="header__info">
             <div className="header__links">
-                <a className="header__link">
-                    <img className="header__icon header__icon_active" src={tg}/>
+                <a className="header__link" href="#" aria-label="Telegram">
+                    <img className="header__icon header__icon_active" src={tg} alt="Telegram"/>
                 </a>
-                <a className="header__link">
-                    <img className="header__icon header__icon_active" src={inst}/>
+                <a className="header__link" href="#" aria-label="Instagram">
+                    <img className="header__icon header__icon_active" src={inst} alt="Instagram"/>
                 </a>
-                <img className="header__icon" src={phone}/>
+                <img className="header__icon" src={phone} alt="Телефон"/>
             </div>
             <a href="tel: +79960008292" className="header__phone">+7-996-000-82-92</a>
-            <button onClick={handleOpen} type="click" className="header__menu-button">
-                <img className="header__menu-icon" src={menu}/>
+            <button onClick={handleOpen} type="button" className="header__menu-button" aria-label="Открыть меню">
+                <img className="header__menu-icon" src={menu} alt="Меню"/>
             </button>
         </div>
         {isClicked ? <Navigation handleClose={handleClose} /> : ''}
