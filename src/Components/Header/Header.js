@@ -19,7 +19,7 @@ function Header() {
     return(
         <header className='header'>
         <div className="header__title-box">
-            <h1 className="header__title">IRINA</h1>
+            <h1 className="header__title">✨ IRINA ✨</h1>
             <h2 className="header__subtitle">Brow-master</h2>
         </div>
         <div className="header__info">

@@ -1,3 +1,4 @@
+// Test branch: Added small improvements for better user experience
 import About from "../About/About";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
