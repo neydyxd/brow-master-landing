@@ -1,177 +1,212 @@
-.header{
-    height: 120px;
+.header {
+    height: 90px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 20px;
-    border-bottom: 1px solid #808080;
-    padding-bottom: 20px;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(143, 254, 9, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(13, 13, 13, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    margin: 0 -5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    animation: fadeInUp 0.8s ease-out;
 }
 
-.header__title-box{
+.header__title-box {
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: relative;
 }
 
-.header__title{
+.header__title {
     margin: 0;
     text-align: center;
     color: white;
-    font-size: 70px;
-    letter-spacing: 6px;
-    font-family: Helvetica, Arial;
+    font-size: 56px;
+    letter-spacing: 10px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+    transition: text-shadow 0.3s ease;
 }
 
-.header__subtitle{
+.header__title:hover {
+    text-shadow: 0 0 40px rgba(143, 254, 9, 0.2);
+}
+
+.header__subtitle {
     margin: 0;
-    margin-top: -30px;
-    margin-right: -62px ;
+    margin-top: -22px;
+    margin-right: -50px;
     font-family: Shlapak;
     color: #8FFE09;
-    font-size: 50px;
+    font-size: 40px;
     letter-spacing: 5px;
-    transform: rotate(-10deg);
+    transform: rotate(-8deg);
+    text-shadow: 0 0 20px rgba(143, 254, 9, 0.3);
+    transition: text-shadow 0.3s ease;
 }
 
-.header__info{
+.header__info {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 20px;
 }
 
-.header__links{
-    width: 180px;
+.header__links {
+    width: 140px;
     display: flex;
     justify-content: space-between;
+    gap: 10px;
 }
 
-.header__link{
-
-    object-fit: cover;
+.header__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(143, 254, 9, 0.08);
+    border: 1px solid rgba(143, 254, 9, 0.15);
+    transition: all 0.3s ease;
 }
-.header__icon{
-    max-width: 32px;
+
+.header__link:hover {
+    background: rgba(143, 254, 9, 0.15);
+    border-color: rgba(143, 254, 9, 0.4);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(143, 254, 9, 0.2);
+}
+
+.header__icon {
+    max-width: 20px;
     object-fit: contain;
     filter: invert(81%) sepia(49%) saturate(859%) hue-rotate(32deg) brightness(104%) contrast(99%);
+    transition: all 0.3s ease;
 }
 
-.header__icon_active:hover{
-    opacity: 0.6;
+.header__icon_active:hover {
+    opacity: 1;
     cursor: pointer;
 }
 
-.header__phone{
-    font-size: 30px;
+.header__phone {
+    font-size: 22px;
     color: white;
-    font-family: Helvetica;
-    margin-left: 20px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    letter-spacing: 1px;
     text-decoration: none;
     background: linear-gradient(
-            to right,
-            #8ffe09 20%,
-            white 30%,
-            white 70%,
-            #8ffe09 80%
-        );
+        to right,
+        #8ffe09 20%,
+        white 30%,
+        white 70%,
+        #8ffe09 80%
+    );
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-fill-color: transparent;
     background-size: 500% auto;
     animation: textShine 5s ease-in-out infinite alternate;
+    transition: opacity 0.3s ease;
 }
 
 @keyframes textShine {
-    0% {
-        background-position: 0% 50%;
-    }
-    100% {
-        background-position: 100% 50%;
-    }
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
 }
 
-.header__phone:hover{
-    opacity: 0.6;
+.header__phone:hover {
+    opacity: 0.8;
     cursor: pointer;
 }
 
-.header__menu-button{
+.header__menu-button {
     display: none;
 }
 
 @media screen and (min-width: 640px) and (max-width: 1023px) {
-
-
-    .header__title{
-        font-size: 48px;
+    .header__title {
+        font-size: 40px;
     }
 
-    .header__subtitle{
-        font-size: 33px;
-        margin-top: -22px;
+    .header__subtitle {
+        font-size: 28px;
+        margin-top: -18px;
     }
 
-    .header__icon{
-        max-width: 24px;
+    .header__icon {
+        max-width: 18px;
     }
 
-    .header__phone{
-        font-size: 20px;
+    .header__phone {
+        font-size: 16px;
     }
 
-    .header__links{
-        max-width: 120px;
+    .header__links {
+        max-width: 100px;
     }
 }
 
 @media screen and (min-width: 320px) and (max-width: 639px) {
-    .header{
-        height: 80px;
+    .header {
+        height: 70px;
         padding-bottom: 10px;
     }
 
-    .header__title{
-        font-size: 32px;
+    .header__title {
+        font-size: 28px;
+        letter-spacing: 6px;
     }
 
-    .header__subtitle{
-        font-size: 26px;
-        margin-top: -15px;
+    .header__subtitle {
+        font-size: 22px;
+        margin-top: -12px;
     }
 
-    .header__icon{
+    .header__icon {
         display: none;
     }
 
-    .header__phone{
+    .header__phone {
         display: none;
     }
 
-    .header__links{ 
+    .header__links {
         display: none;
     }
 
-    .header__menu-button{
-        display: block;
-        width: 30px;
-        height: 30px;
-        object-fit: cover;
-        background: none;
-        box-shadow: none;
-        border: none;
-        margin-right: 20px;
+    .header__menu-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background: rgba(143, 254, 9, 0.08);
+        border: 1px solid rgba(143, 254, 9, 0.15);
+        border-radius: 10px;
+        margin-right: 10px;
+        transition: all 0.3s ease;
     }
-    
-    .header__menu-button:hover{
-        opacity: 0.6;
+
+    .header__menu-button:hover {
+        background: rgba(143, 254, 9, 0.15);
         cursor: pointer;
     }
 
-    .header__menu-icon{
-        width: 30px;
-        height: 30px;
-        filter: invert(100%) sepia(5%) saturate(20%) hue-rotate(252deg) brightness(108%) contrast(106%);
+    .header__menu-icon {
+        width: 22px;
+        height: 22px;
+        filter: invert(81%) sepia(49%) saturate(859%) hue-rotate(32deg) brightness(104%) contrast(99%);
     }
 }

@@ -1,43 +1,49 @@
-.carousel__container{
-    width: 30%;
+.carousel__container {
+    width: 40%;
     aspect-ratio: 3/4;
     display: flex;
-    align-items: center;    
+    align-items: center;
+    gap: 10px;
 }
 
-.carousel__window{
+.carousel__window {
     height: 100%;
     overflow: hidden;
-    margin: 0 10px 0 10px;
+    border-radius: 16px;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3);
 }
 
-.carousel__all-pages-container{ 
+.carousel__all-pages-container {
     height: 100%;
     display: flex;
-    transition: translate;
     transition-property: transform;
-    transition-duration: 300ms;
-    transition-timing-function: ease-in-out;
+    transition-duration: 400ms;
+    transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-
-
-.carousel__arrow:hover{
+.carouser__arrow {
     cursor: pointer;
-    opacity: 0.6;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    padding: 8px;
+    border-radius: 50%;
 }
 
+.carouser__arrow:hover {
+    opacity: 0.7;
+    transform: scale(1.15);
+    background: rgba(143, 254, 9, 0.08);
+}
 
 @media screen and (min-width: 800px) and (max-width: 1279px) {
-    .carousel__container{
+    .carousel__container {
         width: 50%;
     }
 }
 
 @media screen and (min-width: 320px) and (max-width: 799px) {
-    .carousel__container{
+    .carousel__container {
         margin-right: 0;
         width: 90%;
     }
-
 }

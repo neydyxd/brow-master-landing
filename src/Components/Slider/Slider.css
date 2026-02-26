@@ -1,205 +1,202 @@
-.slider{
-display: flex;
-justify-content: space-between;
-margin-top: 150px;
+.slider {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 120px;
+    gap: 40px;
+    animation: fadeInUp 1s ease-out;
 }
 
-.slider__title_1{
+.slider__title_1 {
     margin: 0;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     margin-left: 20px;
     font-family: Shlapak;
     color: #8FFE09;
-    font-size: 50px;
-    transform: rotate(-15deg);
+    font-size: 45px;
+    transform: rotate(-12deg);
+    text-shadow: 0 0 20px rgba(143, 254, 9, 0.3);
 }
 
-.slider__title_2{
-    font-family: Helvetica;
-    font-size: 60px;
+.slider__title_2 {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 50px;
+    font-weight: 300;
     color: white;
     max-width: 320px;
     margin: 0;
     display: flex;
+    letter-spacing: 2px;
+    line-height: 1.1;
 }
 
-.slider__label{
+.slider__label {
     display: inline-block;
-    min-width: 150px;
-    border-top: 1px solid #808080;
+    min-width: 120px;
+    border-top: 1px solid rgba(143, 254, 9, 0.3);
     margin-left: -20px;
 }
 
-.slider__about{
+.slider__about {
     max-width: 50%;
 }
 
-.slider__title_3{
+.slider__title_3 {
     margin: 0;
     font-family: Shlapak;
     color: #8FFE09;
-    font-size: 50px;
+    font-size: 45px;
     text-align: right;
     transform: rotate(5deg);
-    margin-top: -90px;
+    margin-top: -70px;
+    text-shadow: 0 0 20px rgba(143, 254, 9, 0.3);
 }
 
-.slider__list{
+.slider__list {
     list-style: none;
-    margin-top: 100px;
+    margin-top: 60px;
     padding: 0;
 }
 
-.slider__list-element::before{
-    content: url("   ");
-    margin-right: 30px;
+.slider__list-element::before {
+    content: '';
+    margin-right: 12px;
     display: inline-block;
-    content: ' ';
-    background-image: url('../../images/arrow.svg');
-    background-repeat: no-repeat;
-    filter: invert(80%) sepia(28%) saturate(1491%) hue-rotate(35deg) brightness(108%) contrast(99%);
-    background-size: 28px 43px;
-    height: 30px;
-    width: 28px;
+    width: 8px;
+    height: 8px;
+    background: #8FFE09;
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(143, 254, 9, 0.5);
+    vertical-align: middle;
 }
 
-.slider__list-element{
-    color: white;
-    font-family: Helvetica;
+.slider__list-element {
+    color: rgba(255, 255, 255, 0.85);
+    font-family: Helvetica, Arial, sans-serif;
     font-size: 16px;
-    margin-bottom: 20px;
-    line-height: 1.5;
-    text-indent: -58px;
-    margin-left: 58px;
+    margin-bottom: 18px;
+    line-height: 1.7;
+    transition: color 0.3s ease;
 }
 
+.slider__list-element:hover {
+    color: white;
+}
 
-
-.slider__title-box{
+.slider__title-box {
     width: 380px;
 }
-.slider__first-box{
+
+.slider__first-box {
     display: flex;
     align-items: center;
 }
-.slider__item{
+
+.slider__item {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     user-select: none;
+    border-radius: 16px;
 }
 
-.slider__item_1{
+.slider__item_1 {
     background-image: url('../../images/test.jpg');
     background-position: -100px center;
     background-size: cover;
     background-repeat: no-repeat;
+    border-radius: 16px;
 }
 
-.slider__item_2{
+.slider__item_2 {
     background-image: url('../../images/test.jpg');
     background-position: -100px center;
     background-size: cover;
     background-repeat: no-repeat;
+    border-radius: 16px;
 }
 
-.slider__item_3{
+.slider__item_3 {
     background-image: url('../../images/test.jpg');
     background-position: -100px center;
     background-size: cover;
     background-repeat: no-repeat;
-} 
+    border-radius: 16px;
+}
 
-
-.slider__arrow-block{
+.slider__arrow-block {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     max-height: 70%;
 }
 
-.slider__arrow{
+.slider__arrow {
     width: 100px;
     filter: invert(81%) sepia(49%) saturate(859%) hue-rotate(32deg) brightness(104%) contrast(99%);
     justify-self: center;
     height: 100px;
 }
 
-
-@media screen and (min-width:800px) and (max-width: 1279px) {
-    .slider__list-element{
+@media screen and (min-width: 800px) and (max-width: 1279px) {
+    .slider__list-element {
         font-size: 14px;
-        text-indent: -58px;
-        margin-left: 58px;
     }
 }
 
 @media screen and (min-width: 320px) and (max-width: 799px) {
-    .slider{
+    .slider {
         flex-direction: column-reverse;
         margin: 0 auto;
-        margin-top: 50px;
+        margin-top: 60px;
         align-items: center;
+        gap: 20px;
     }
 
-    .slider__about{
+    .slider__about {
         max-width: 100%;
     }
 
-    .slider__item_1{
-        background-position: -100px center;
-    }
-    
-    .slider__item_2{
-        background-position: -100px center;
-    }
-    
-    .slider__item_3{
+    .slider__item_1 {
         background-position: -100px center;
     }
 
-    .slider__title_2{
-        font-size: 30px;
+    .slider__item_2 {
+        background-position: -100px center;
     }
 
-    .slider__title_1{
-        font-size: 40px;
-        margin-bottom: 20px;
+    .slider__item_3 {
+        background-position: -100px center;
     }
 
-
-    .slider__title_2{
-        font-size: 30px;
+    .slider__title_2 {
+        font-size: 28px;
     }
 
-    .slider__title_3{
-        font-size: 40px;
-        margin-top: -40px;
+    .slider__title_1 {
+        font-size: 36px;
+        margin-bottom: 15px;
     }
 
-    .slider__title-box{
+    .slider__title_3 {
+        font-size: 36px;
+        margin-top: -35px;
+    }
+
+    .slider__title-box {
         width: 240px;
     }
-    
-    .slider__list{
-        margin-top: 50px;
+
+    .slider__list {
+        margin-top: 40px;
         min-width: 100%;
     }
 
-    .slider__list-element{
-        font-size: 12px;
-        text-indent: -50px;
-        margin-left: 50px;
+    .slider__list-element {
+        font-size: 13px;
     }
 
-    .slider__list-element::before{
-        background-size: 20px 28px;
-        height: 20px;
-        width: 20px;
-    }
-
-    .slider__label{
-        min-width: 100px;
+    .slider__label {
+        min-width: 80px;
     }
 }
