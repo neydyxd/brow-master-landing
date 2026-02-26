@@ -1,189 +1,219 @@
-.about{
+.about {
     display: flex;
     margin: 0 auto;
     margin-top: 100px;
     justify-content: space-between;
-    max-width: 80%;
-
+    max-width: 100%;
+    gap: 60px;
+    animation: fadeInUp 1s ease-out;
 }
 
-.about__text-box{
+.about__text-box {
     display: flex;
     flex-direction: column;
     max-width: 50%;
+    flex: 1;
 }
 
-.about__photo-box{
+.about__photo-box {
     width: 40%;
     position: relative;
+    border-radius: 20px;
+    overflow: hidden;
 }
 
-.about__photo{
-    object-fit: contain;
-    max-width: 100%;
+.about__photo-box::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    background: linear-gradient(135deg, #8FFE09 0%, transparent 50%, #8FFE09 100%);
+    border-radius: 22px;
+    z-index: -1;
+    opacity: 0.4;
+    animation: glowPulse 4s ease-in-out infinite;
 }
 
-.about__button{
-    margin: 0 auto;
-    margin-top: 50PX;
-    padding: 0;
+.about__photo {
+    object-fit: cover;
     width: 100%;
-    height: 50PX;
-    background: none;
+    height: 100%;
+    border-radius: 20px;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.about__photo-box:hover .about__photo {
+    transform: scale(1.03);
+}
+
+.about__button {
+    margin: 0 auto;
+    margin-top: 40px;
+    padding: 16px 0;
+    width: 100%;
+    height: auto;
+    background: transparent;
     border: 2px solid #8FFE09;
+    border-radius: 12px;
     color: white;
-    font-size: 20px;
-    font-family: Helvetica;
-    transition: all ease 1s;
-}
-
-.about__button:hover{
-
+    font-size: 18px;
+    font-family: Helvetica, Arial, sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
     cursor: pointer;
-    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
 }
 
-.about__title{
+.about__button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(143, 254, 9, 0.15), transparent);
+    transition: left 0.5s ease;
+}
+
+.about__button:hover::before {
+    left: 100%;
+}
+
+.about__button:hover {
+    background: rgba(143, 254, 9, 0.1);
+    box-shadow: 0 0 30px rgba(143, 254, 9, 0.2), inset 0 0 30px rgba(143, 254, 9, 0.05);
+    transform: translateY(-2px);
+}
+
+.about__title {
     margin: 0;
     color: white;
-    font-family: Helvetica;
-    font-size: 50px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 48px;
+    font-weight: 300;
+    letter-spacing: 3px;
+    text-transform: uppercase;
 }
 
-.about__subtitle{
+.about__subtitle {
     color: #8FFE09;
     font-family: Shlapak;
-    font-size: 60px;
+    font-size: 50px;
     margin: 0;
     text-align: center;
     margin-right: 70px;
-    margin-top: -40px;
+    margin-top: -30px;
+    text-shadow: 0 0 20px rgba(143, 254, 9, 0.3);
 }
 
-.aboute__title-container{
+.aboute__title-container {
     display: flex;
+    align-items: center;
 }
 
-.about__label{
+.about__label {
     width: 150px;
-    border-top: 1px solid #808080;
+    border-top: 1px solid rgba(143, 254, 9, 0.3);
     margin-left: 20px;
 }
 
-.about__list{
+.about__list {
     list-style: none;
     padding: 0;
-
+    margin-top: 10px;
 }
 
-.about__list-element::before{
-    content: url("   ");
-    margin-right: 10px;
+.about__list-element::before {
+    content: '';
+    margin-right: 12px;
     display: inline-block;
-    content: ' ';
-    background-image: url('../../images/arrow.svg');
-    background-repeat: no-repeat;
-    filter: invert(80%) sepia(28%) saturate(1491%) hue-rotate(35deg) brightness(108%) contrast(99%);
-    background-size: 28px 43px;
-    height: 30px;
-    width: 28px;
+    width: 8px;
+    height: 8px;
+    background: #8FFE09;
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(143, 254, 9, 0.5);
+    vertical-align: middle;
 }
 
-.about__list-element{
-    color: white;
-    font-family: Helvetica;
+.about__list-element {
+    color: rgba(255, 255, 255, 0.85);
+    font-family: Helvetica, Arial, sans-serif;
     font-size: 16px;
-    margin-bottom: 20px;
-    text-indent: 0;
-    text-indent: -38px;
-    margin-left: 38px;
-    line-height: 1.5;
-
+    margin-bottom: 16px;
+    line-height: 1.7;
+    padding-left: 0;
+    transition: color 0.3s ease;
 }
 
+.about__list-element:hover {
+    color: white;
+}
 
-@media screen and (min-width:800px) and (max-width: 1279px) {
-    .about{
-        max-width: 100%;
+@media screen and (min-width: 800px) and (max-width: 1279px) {
+    .about {
+        gap: 40px;
     }
-    .about__title{
+
+    .about__title {
         font-size: 30px;
     }
 
-    .about__subtitle{
+    .about__subtitle {
         font-size: 30px;
         text-align: left;
-        margin-left: 120px;
+        margin-left: 100px;
         margin-top: -10px;
     }
 
-    .about__label{
+    .about__label {
         min-width: 80px;
     }
 
-    .about__list{
-        list-style-position: outside;
-    }
-
-    .about__list-element{
+    .about__list-element {
         font-size: 14px;
-        text-indent: -43px;
-        margin-left: 43px;
-
     }
-
-    .about__list-element::before{
-        margin-right: 15px;
-    }
-
 }
 
-@media screen and (min-width:320px) and (max-width: 799px) {
-    .about{
+@media screen and (min-width: 320px) and (max-width: 799px) {
+    .about {
         flex-direction: column;
-        max-width: 100%;
+        gap: 30px;
+        margin-top: 60px;
     }
 
-    .about__photo-box{
+    .about__photo-box {
         margin: 0 auto;
-        width: 90%;
+        width: 80%;
     }
 
-    .about__text-box{
+    .about__text-box {
         max-width: 100%;
-        margin-top: 90px;
         flex-direction: column-reverse;
     }
-    .about__button{
+
+    .about__button {
         margin-top: 0;
         margin-bottom: 20px;
     }
 
-
-    .about__title{
-        font-size: 30px;
+    .about__title {
+        font-size: 28px;
     }
 
-    .about__subtitle{
-        font-size: 40px;
+    .about__subtitle {
+        font-size: 36px;
         text-align: center;
-        margin-right: 120px;
+        margin-right: 80px;
         margin-top: -10px;
     }
 
-    .about__label{
+    .about__label {
         min-width: 70px;
     }
 
-    .about__list-element{
-        font-size: 12px;
-        text-indent: -30px;
-        margin-left: 30px;
-    }
-
-    .about__list-element::before{
-        background-size: 20px 28px;
-        height: 20px;
-        width: 20px;
+    .about__list-element {
+        font-size: 14px;
     }
 }

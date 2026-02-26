@@ -2,10 +2,15 @@ import close from '../../images/close.png';
 
 function Popup({isOpen, onClose}){
     const popupClass = `popup ${isOpen ? 'popup_opened' : ''}`;
-    
+
+    function handleOverlayClick(e) {
+        if (e.target === e.currentTarget) {
+            onClose();
+        }
+    }
+
     return(
-        <>
-        <div className={popupClass}>
+        <div className={popupClass} onClick={handleOverlayClick}>
             <div className="popup__container">
                 <button onClick={onClose} className="popup__close" type="button" aria-label="Закрыть форму">
                     <img className="popup__close-image" src={close} alt="Кнопка закрытия формы" />
@@ -30,7 +35,6 @@ function Popup({isOpen, onClose}){
                 </form>
             </div>
         </div>
-        </>
     )
 }   
 

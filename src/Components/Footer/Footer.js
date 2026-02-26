@@ -1,9 +1,8 @@
-import git from '../../images/github.svg'
 function Footer() {
     return(
         <footer className="footer">
-            <a className="footer__git" href='https://github.com/neydyxd' target='_blank'></a>
-            <p className="footer__copyright">&#169; 2023. Максимов Степан</p>
+            <a className="footer__git" href='https://github.com/neydyxd' target='_blank' rel='noreferrer' aria-label='GitHub'> </a>
+            <p className="footer__copyright">&#169; 2024. Максимов Степан</p>
         </footer>
     );
 }
